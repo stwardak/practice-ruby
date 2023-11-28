@@ -12,6 +12,9 @@ class Transportation
   def turn(new_direction)
     @direction = new_direction
   end
+  def current_speed
+    @speed
+  end
 end
 
 class Car < Transportation
@@ -26,3 +29,17 @@ class Bike < Transportation
   end
 end
 
+car1 = Car.new()
+bike1 = Bike.new()
+
+puts car1.current_speed
+puts bike1.current_speed
+
+car1.honk_horn
+bike1.ring_bell
+
+car1.accelerate
+bike1.accelerate
+
+puts car1.current_speed
+puts bike1.current_speed
